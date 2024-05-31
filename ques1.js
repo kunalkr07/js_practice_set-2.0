@@ -82,4 +82,71 @@ console.log("The change string is:\n",changeUpperCase(string));
 
 console.log('----------------------------------------');
 
-/* */
+/*write a javscript program to get the current date */
+
+
+function currentDate(){
+    const days=new Date;
+    const day=days.getDate();
+    const month=days.getMonth()+1;
+    const year=days.getFullYear();
+
+    let fullDate=`The current date is:${day}-${month}-${year}`;
+
+    return fullDate;
+}
+
+console.log(currentDate());
+
+console.log('----------------------------------------');
+
+/*write a javascript program to calculate the number of days left untill the next christmas */
+
+function christmasDay(){
+    let day=new Date;
+    
+    const CurrentYear=day.getFullYear();
+
+    let isChristmas=new Date(CurrentYear,11,25);
+
+    console.log(isChristmas)
+
+    if(day > isChristmas){
+        isChristmas=setFullYear(CurrentYear + 1,11,25)
+    }
+    let difference=isChristmas  - day;
+
+    const leftDays=Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+    return leftDays;
+}
+console.log(`The next christmas will be ${christmasDay()} days`);
+
+console.log('----------------------------------------');
+
+/* write a program that accept two integer and display the larger */
+
+const prompt=require("prompt-sync")();
+
+//  const greater=()=>{
+    
+// let num1=prompt("Enter first number:");
+// let num2=prompt("Enter second number:");
+
+// if(num1>num2){
+//     console.log("num1 is greater")
+// }else{
+//     console.log("num2 is greater")
+// }
+//  }
+
+//  greater();
+
+ /*write a javascript function to check whether as input is array or not */
+
+ function checkArray(user){
+   
+    return Array.isArray(user);
+ }
+
+ console.log(checkArray([1,2,3,4]));

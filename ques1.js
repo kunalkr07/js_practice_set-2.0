@@ -58,3 +58,28 @@ console.log(countVowels(exampleString));
 
 
 console.log('----------------------------------------');
+
+
+/*write a javscript function that accepts a string as a parameter and convert the first letter of
+each word of the string in uppercase*/
+
+function changeUpperCase(str){
+    let letters='abcdefghijklmnopqrstuvwxyz'
+
+    console.log(`Lets splits the sentences`)
+    let change=str.split(' ');
+    console.log(change)
+     let capitalize=change.map(word=>{
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+     })
+     return capitalize.join(' ');
+
+}
+
+const string='the lazy frog jump on the tree'
+console.log("Before change:\n", string)
+console.log("The change string is:\n",changeUpperCase(string));
+
+console.log('----------------------------------------');
+
+/* */

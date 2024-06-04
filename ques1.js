@@ -150,3 +150,30 @@ const prompt=require("prompt-sync")();
  }
 
  console.log(checkArray([1,2,3,4]));
+
+
+ console.log('----------------------------------------');
+
+ /*write a javascript function to clone an array */
+
+ function clone(arr){
+   return arr.slice(0);
+ }
+
+ const originalArray=[1,2,4,0]
+ console.log(`original array is ${originalArray}`)
+const cloneArray=clone(originalArray)
+console.log(`clone array is ${cloneArray}`)
+
+console.log(originalArray===cloneArray)
+
+
+/*write a program to sort an array */
+
+const array=[3, 8, 7, 6, 5, -4, 3, 2, 1]
+
+const sortedArr=array.sort();
+console.log(sortedArr);
+
+
+
